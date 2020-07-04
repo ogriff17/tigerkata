@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/javascript/Nav'
 import Login from './components/javascript/Login'
 import Home from './components/javascript/Home'
-import {BrowseRouter as Router, Switch, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
