@@ -1,0 +1,34 @@
+* {
+    box-sizing:border-box;
+}
+
+@media all and (min-width:480px){
+    .Login{
+        padding:60px 0;
+    }
+
+
+.Login form{
+    margin:0 auto;
+    max-width: 320px;
+    border-width:5px;
+}
+
+}
+
+#PwBox{
+    height:20%;
+    width:10%;
+    margin:auto;
+    border:3px solid orange;
+    padding:30px;
+    background-color:orange;
+}
+
+#PwText{
+    text-align:center;
+}
+
+.LoginInput{
+    width:100%;
+}

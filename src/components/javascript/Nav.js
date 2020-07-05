@@ -7,6 +7,7 @@ function Nav () {
       <nav>
           <ul className="nav-Links">
               <Link to="/"><li>Home</li></Link>
+              <Link to="/Signup"><li>Sign Up</li></Link>
               <Link to="/Login"><li>Login</li></Link>
           </ul>
       </nav>
