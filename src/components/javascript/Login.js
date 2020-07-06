@@ -25,7 +25,7 @@ export default function Login () {
                 <br></br>
                 <FormGroup controlId ="email" bsSize="large"> 
                     <FormLabel>Email</FormLabel>
-                    <FormControl classname ="LoginInput"
+                    <FormControl className ="LoginInput"
                     autoFocus
                     type="email"
                     value={email}
