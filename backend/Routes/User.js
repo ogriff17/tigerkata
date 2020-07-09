@@ -16,7 +16,7 @@ router.route('/add').post((req, res) => {
         password
     });
     newUser.save()
-    .then(() => res.json('User added!'))
+     .then(() => res.redirect('/Quiz'))
     .catch(err => res.status(400).json('Error: ' + err));
 })
 module.exports = router;
