@@ -16,10 +16,10 @@ connection.once( 'open', () => {
 })
 
 const MatchesRouter = require('./Routes/Matches');
-const UserRouter = require('./Routes/User');
+const UserRouter = require('./Routes/Users');
 
 app.use('/Matches', MatchesRouter); //Here to add more variables later i.e. Login and Quiz.
-app.use('/User', UserRouter);
+app.use('/Users', UserRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

@@ -1,25 +1,25 @@
-import "../css/Quiz.css";
+import "../css/FindFight.css";
 import { Button, FormGroup, FormControl, FormText, FormCheck } from "react-bootstrap";
 import { FormLabel } from "react-bootstrap";
 import React, { useState } from "react";
 import {Card} from "react-bootstrap";
 import ListGroup from 'react-bootstrap/ListGroup';
+import Table from 'react-bootstrap/table';
+// import {ButtonGroup, ToggleButton} from "react-bootstrap";
+// import axios from "axios";
+import {Radio, RadioGroup} from 'react-radio-group';
 
 export default function FindFight() {
-  const [Weight, Height, Gender, Age, Experience] = useState("");
-  
-
-/*   function validateForm() {
-    return (
-      email.length > 0 &&
-      password.length > 0 &&
-      verify.length > 0 &&
-      password === verify
-    );
-    /*  if(email !== password){
-        alert("Password do not match!");
-      }; */
-  
+  const [
+    Name,
+    Weight,
+    Height,
+    Gender,
+    Age,
+    Experience,
+    weightClass,
+    Email,
+  ] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -36,12 +36,20 @@ export default function FindFight() {
             <Card.Header as="h5"></Card.Header>
             <Card.Body>
               <Card.Title></Card.Title>
-              <Card.Text>
-                This will take you to the closest person that shares similar
-                attributes and one we think will be a good sparring partner for
-                you.
-              </Card.Text>
-              <Button variant="primary">Go!</Button>
+              <ListGroup>
+                <ListGroup.Item value={Name}>Name:</ListGroup.Item>
+                <ListGroup.Item value={Weight}>Weight:</ListGroup.Item>
+                <ListGroup.Item value={Height}>Height:</ListGroup.Item>
+                <ListGroup.Item value={Gender}>Gender:</ListGroup.Item>
+                <ListGroup.Item value={Age}>Age:</ListGroup.Item>
+                <ListGroup.Item value={Experience}>Experience:</ListGroup.Item>
+                <ListGroup.Item value={weightClass}>
+                  Weight Class:
+                </ListGroup.Item>
+                <ListGroup.Item value={Email}>Email:</ListGroup.Item>
+              </ListGroup>
+              <br></br>
+              <Button variant="primary">Find my opponent</Button>
             </Card.Body>
           </Card>
           <Card>
@@ -50,18 +58,66 @@ export default function FindFight() {
               <Card.Title></Card.Title>
               <Card.Text>
                 Based on their statistics, this is the match that we would
-                suggest. 
+                suggest.
               </Card.Text>
-             
-              <ListGroup>
-                <ListGroup.Item value = {Weight}>Weight:</ListGroup.Item>
-                <ListGroup.Item value = {Height}>Height:</ListGroup.Item>
-                <ListGroup.Item value = {Gender}>Gender:</ListGroup.Item>
-                <ListGroup.Item value = {Age}>Age:</ListGroup.Item>
-                <ListGroup.Item value = {Experience}>Experience:</ListGroup.Item>
-              </ListGroup>
               <br></br>
-              <Button variant="primary">Chat now!</Button>
+              <Card>
+                <Card.Header>Featured Opponents:</Card.Header>
+                <Card.Body>
+                  <Table responsive className="Table" bordered ='true'>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name:</th>
+                        <th>Weight:</th>
+                        <th>Height:</th>
+                        <th>Gender:</th>
+                        <th>Age:</th>
+                        <th>Yrs EXP:</th>
+                        <th>Weight Class:</th>
+                        <th>Email:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                      <br></br>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
             </Card.Body>
           </Card>
         </form>

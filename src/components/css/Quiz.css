@@ -2,9 +2,10 @@
     box-sizing:border-box;
 }
 
-.Quiz{
-  
+#Quizbox{
+    background-image: url("/public/images/tigereyes.png"); /*This is not working*/
 }
+
 
 
 

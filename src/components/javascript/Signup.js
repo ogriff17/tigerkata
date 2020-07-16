@@ -2,30 +2,50 @@ import '../css/Signup.css';
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { FormLabel } from "react-bootstrap";
 import React, { useState } from "react";
+// import { PromiseProvider } from 'mongoose';
+import axios from "axios";
 
 
-export default function Signup () {
+
+const Signup = (props) => {
     const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [password, setPassword,] = useState("");
     const [verify, setVerify,] = useState("");
 
     function validateForm() {
-        return email.length > 0 && password.length > 0 && verify.length > 0 && password === verify;
-    /*  if(email !== password){
-        alert("Password do not match!");
-      }; */
+        return email.length > 0
+         && name.length > 0
+         && password.length > 0
+         && verify.length > 0
+         && password === verify;
     };
     
 
     function handleSubmit(event){
         event.preventDefault();
         alert("This is a test");
+        const user = {
+            email: email,
+            name: name,
+            password: password
+        }
+        alert(user);
+        axios.post('http://localhost:5000/users/add', user)
+        .then(res => DoRedirect(res))
+        .catch((error) => {console.log(error)});
 
-    };
+    }
+        function DoRedirect(res){
+            alert(res.data);
+            props.history.push("/Login");
+            return;
+        }
+
   return (
       <div>
           <br></br><br></br>
-        <div className = "Login" id="PwBox">
+        <div className = "Login" id="SignUp">
             <h2>Sign Up</h2>
             <form onSubmit ={handleSubmit}>
                 <br></br>
@@ -39,6 +59,16 @@ export default function Signup () {
                     />
                     <br></br><br></br>
                 </FormGroup>
+                <FormGroup controlId ="name" bsSize="large"> 
+                    <FormLabel>Name:</FormLabel>
+                    <FormControl className ="NameInput"
+                    autoFocus
+                    type="text"
+                    value={name}
+                    onChange = {e => setName(e.target.value)}
+                    />
+                    <br></br><br></br>
+                    </FormGroup>
                 <FormGroup controlId ="password" bsSize ="large">
                     <FormLabel>Password</FormLabel>
                      <FormControl className ="LoginInput"
@@ -66,3 +96,7 @@ export default function Signup () {
 
 };
 
+
+
+
+export default Signup;

@@ -1,0 +1,23 @@
+* {
+    box-sizing:border-box;
+}
+
+#SignUp{
+    height:20%;
+    width:20%;
+    margin:auto;
+    border:3px solid orange;
+    padding:30px;
+    background-color:orange;
+}
+
+
+
+/* #NameInput{
+    height:20%;
+    width:10%;
+    margin:auto;
+    border:3px solid orange;
+    padding:30px;
+    background-color:orange;
+} */
