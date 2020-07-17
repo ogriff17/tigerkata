@@ -8,6 +8,17 @@ router.route('/Login').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/Quiz').get((req, res) => {
+    console.log('Inside/Login route')
+    const email = req.body.email;
+    console.log('email=' + email)
+    User.find({}, {email: 1, name: 1, age: 1, weight: 1, height: 1, gender: 1, experience: 1, style: 1, trainingHours: 1})
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
+
 router.route('/add').post((req, res) => { //This is used for when you sign up.
     const email = req.body.email;
     const name = req.body.name;
