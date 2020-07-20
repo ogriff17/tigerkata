@@ -10,7 +10,7 @@ const userSchema = new Schema ({
     height:{type:Number, required: false, unique: false, trim: true, minlength: 2},
     gender:{type:String, required: false, unique: false, trim: true, minlength: 1},
     experience:{type:Number, required: false, unique: false, trim: true, minlength: 2},
-    experienceLevel:{type:Number, required: false, unique: false, trim: true},
+    experienceLevel:{type:String, required: false, unique: false, trim: true},
     trainingHours:{type:Number, required:false, unique:false, trim:true, minlength:1},
     style:{type:String, required:false, unique:false, trim:true, minlength:1},
     weightClass:{type:String, required:false, unique:false, trim: true},

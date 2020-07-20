@@ -138,9 +138,8 @@ onChangeStyle(e){
       experience: this.state.experience,
       trainingHours: this.state.trainingHours,
       style: this.state.style
-     /*  weightClass: weightClass */
     }
-    console.log('user=' + user);
+    console.log('user=' + user.style);
         window.$Name = user.name;
         window.$Email = user.email;
         axios.post('http://localhost:5000/users/update', user)

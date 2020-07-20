@@ -8,15 +8,24 @@ router.route('/Login').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/Quiz').get((req, res) => {
+router.route('/quiz').get((req, res) => {
     console.log('Inside/Login route')
     const email = req.body.email;
     console.log('email=' + email)
-    User.find({}, {email: 1, name: 1, age: 1, weight: 1, height: 1, gender: 1, experience: 1, style: 1, trainingHours: 1})
+    User.find({}, {email: 1, name: 1, age: 1, weight: 1, height: 1, gender: 1, experience: 1, style: 1, trainingHours: 1, weightClass: 1})
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+
+router.route('/FindFight').get((req, res) => {
+    console.log('Inside/FindFight route')
+    const email = req.body.email;
+    console.log('email=' + email)
+    User.find({}, {email: 1, name: 1, age: 1, weight: 1, height: 1, gender: 1, experience: 1, style: 1, trainingHours: 1, weightClass: 1, ageGroup: 1, experienceLevel: 1})
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
 
 
 router.route('/add').post((req, res) => { //This is used for when you sign up.
@@ -74,11 +83,13 @@ router.route('/update').post((req, res) => { //This is used for when you take th
         experienceLevel = "Proficient";
 
     } else(experienceLevel = "Seasoned");
+    console.log('style =' + style);
 
     console.log("This is in the router!");
     User.update(
         {email: email },
         {$set: {
+            email: email,
             name: name,
             age: age,
             weight: weight,
@@ -89,7 +100,7 @@ router.route('/update').post((req, res) => { //This is used for when you take th
             style: style,
             weightClass: weightClass,
             ageGroup:ageGroup,
-            experienceLevel: experienceLevel
+            experienceLevel: experienceLevel 
         }
          }
     )

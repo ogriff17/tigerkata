@@ -3,6 +3,14 @@
 
 .Table{
     margin:0 auto;
-    /* max-width: 300px; */
+     max-width: 900px; 
     border-width:5px;
+    height:20%;
+    width:100%;
+    margin:auto;
+    border:3px solid orange;
+    padding: 30px;
+    background-color:orange;
+    text-align:left;
 }
+
