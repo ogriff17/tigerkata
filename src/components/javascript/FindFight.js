@@ -12,7 +12,6 @@ import { Card } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import Table from "react-bootstrap/table";
 import axios from "axios";
-// import {ButtonGroup, ToggleButton} from "react-bootstrap";
 import { Radio, RadioGroup } from "react-radio-group";
 import { render } from "@testing-library/react";
 import { If } from "rc-if-else";
@@ -21,15 +20,6 @@ export default class FindFight extends Component {
   constructor(props) {
     super(props);
     this.onChangeName = this.onChangeName.bind(this);
-    /* this.onChangeEmail = this.onChangeEmail.bind(this);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeAge = this.onChangeAge.bind(this);
-    this.onChangeWeight = this.onChangeWeight.bind(this);
-    this.onChangeHeight = this.onChangeHeight.bind(this);
-    this.onChangeGender = this.onChangeGender.bind(this);
-    this.onChangeExperience = this.onChangeExperience.bind(this);
-    this.onChangeTrainingHours = this.onChangeTrainingHours.bind(this);
-    this.onChangeStyle= this.onChangeStyle.bind(this); */
     this.onSubmit = this.onSubmit.bind(this);
     this.onClickOpponents = this.onClickOpponents.bind(this);
     this.state = {
@@ -53,7 +43,8 @@ export default class FindFight extends Component {
     const match = {
       email: who,
       opponent: opponent,
-    };
+    }; 
+     window.Location = '/Email';
   }
 
   componentDidMount() {

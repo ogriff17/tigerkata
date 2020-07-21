@@ -11,6 +11,7 @@
     "express-route": "^0.1.4",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.22",
+    "nodemailer": "^6.4.10",
     "rc-if-else": "^1.1.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -18,7 +19,8 @@
     "react-history": "^0.18.2",
     "react-radio-group": "^3.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.5.1"
   },
   "scripts": {
     "start": "react-scripts start",

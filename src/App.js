@@ -7,6 +7,7 @@ import Signup from './components/javascript/Signup'
 import Quiz from './components/javascript/Quiz'
 import FindFight from './components/javascript/FindFight'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Email from './components/javascript/Email'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path ="/Login" exact component={Login}/>
       <Route path ="/Quiz" exact component={Quiz}/>
       <Route path ="/FindFight" exact component={FindFight}/>
+      <Route path ="/Email" exact component={Email}/>
     </Switch>
     </div>
     </Router>
