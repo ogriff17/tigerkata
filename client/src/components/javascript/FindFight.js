@@ -17,7 +17,7 @@ import { render } from "@testing-library/react";
 import { If } from "rc-if-else";
 
 export default class FindFight extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.onChangeName = this.onChangeName.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -40,11 +40,21 @@ export default class FindFight extends Component {
     console.log("FF inside onClickOpponents");
     console.log("opponents=" + opponent);
     window.$Opponent = true;
-    const match = {
-      email: who,
-      opponent: opponent,
-    }; 
-     window.Location = '/Email';
+    // const match = {
+    //   email: who,
+    //   opponent: opponent,
+    // };
+
+    this.setState({
+      email: opponent,
+      subject: "Schedule Fight",
+      message: "TigerKata has chosen us as sparring partners, what do you think?"
+    });
+
+    console.log("finished");
+
+    window.Location = "/Email";
+    //props.history.push("/Quiz");
   }
 
   componentDidMount() {
@@ -120,7 +130,7 @@ export default class FindFight extends Component {
           res.data.splice(i, 1);
         }
       }
-      console.log('ready to check the gender');
+      console.log("ready to check the gender");
       // if (res.data.length === 0){
       //   console.log("Sorry. No opponent found!");
       // }
@@ -132,16 +142,16 @@ export default class FindFight extends Component {
           res.data[i].experienceLevel !== experienceLevel ||
           res.data[i].ageGroup !== ageGroup
         ) {
-          res.data.splice(i, 1)
-          i = -1
-          console.log('inside the loop!')
+          res.data.splice(i, 1);
+          i = -1;
+          console.log("inside the loop!");
         }
       }
-     if (res.data.length === 0){
+      if (res.data.length === 0) {
         //if(1 == 1){
         alert("Sorry. No opponent found!");
-      } 
-      console.log('res.data.length=' + res.data.length);
+      }
+      console.log("res.data.length=" + res.data.length);
 
       if (res.data.length >= 1) {
         this.setState({
@@ -182,10 +192,9 @@ export default class FindFight extends Component {
     });
   }
   render() {
-    //window.opponent = true;
     console.log("window.opponent =" + window.$Opponent);
     return (
-      <div>
+      <div id="fightHere">
         <br></br>
         <br></br>
         <div className="Fight" id="Cardbox">
@@ -268,7 +277,7 @@ export default class FindFight extends Component {
                   />
                 </FormGroup>
                 <br></br>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" id="button">
                   Find my Opponent
                 </Button>
                 <Card>
@@ -292,80 +301,80 @@ export default class FindFight extends Component {
                           </tr>
                         </thead>
                         <tbody>
-                          <If condition = {this.state.email0}>
-                          <tr>
-                            <td>1</td>
-                            <td>{this.state.name0}</td>
-                            <td>{this.state.weight0}</td>
-                            <td>{this.state.height0}</td>
-                            <td>{this.state.gender0}</td>
-                            <td>{this.state.age0}</td>
-                            <td>{this.state.experience0}</td>
-                            <td>{this.state.weightClass0}</td>
-                            <td>{this.state.email0}</td>
-                            <td>
-                              <Button
-                                onClick={() =>
-                                  this.onClickOpponents(
-                                    this.state.email,
-                                    this.state.email0
-                                  )
-                                }
-                              >
-                                Contact
-                              </Button>
-                            </td>
-                          </tr>
+                          <If condition={this.state.email0}>
+                            <tr>
+                              <td>1</td>
+                              <td>{this.state.name0}</td>
+                              <td>{this.state.weight0}</td>
+                              <td>{this.state.height0}</td>
+                              <td>{this.state.gender0}</td>
+                              <td>{this.state.age0}</td>
+                              <td>{this.state.experience0}</td>
+                              <td>{this.state.weightClass0}</td>
+                              <td>{this.state.email0}</td>
+                              <td>
+                                <Button
+                                  onClick={() =>
+                                    this.onClickOpponents(
+                                      this.state.email,
+                                      this.state.email0
+                                    )
+                                  }
+                                >
+                                  Contact
+                                </Button>
+                              </td>
+                            </tr>
                           </If>
-                          <If condition = {this.state.email1}>
-                          <tr>
-                            <td>2</td>
-                            <td>{this.state.name1}</td>
-                            <td>{this.state.weight1}</td>
-                            <td>{this.state.height1}</td>
-                            <td>{this.state.gender1}</td>
-                            <td>{this.state.age1}</td>
-                            <td>{this.state.experience1}</td>
-                            <td>{this.state.weightClass1}</td>
-                            <td>{this.state.email1}</td>
-                            <td>
-                              <Button
-                                onClick={() =>
-                                  this.onClickOpponents(
-                                    this.state.email,
-                                    this.state.email1
-                                  )
-                                }
-                              >
-                                Contact
-                              </Button>
-                            </td>
-                          </tr>
+                          <If condition={this.state.email1}>
+                            <tr>
+                              <td>2</td>
+                              <td>{this.state.name1}</td>
+                              <td>{this.state.weight1}</td>
+                              <td>{this.state.height1}</td>
+                              <td>{this.state.gender1}</td>
+                              <td>{this.state.age1}</td>
+                              <td>{this.state.experience1}</td>
+                              <td>{this.state.weightClass1}</td>
+                              <td>{this.state.email1}</td>
+                              <td>
+                                <Button
+                                  onClick={() =>
+                                    this.onClickOpponents(
+                                      this.state.email,
+                                      this.state.email1
+                                    )
+                                  }
+                                >
+                                  Contact
+                                </Button>
+                              </td>
+                            </tr>
                           </If>
-                          <If condition = {this.state.email2}>
-                          <tr>
-                            <td>3</td>
-                            <td>{this.state.name2}</td>
-                            <td>{this.state.weight2}</td>
-                            <td>{this.state.height2}</td>
-                            <td>{this.state.gender2}</td>
-                            <td>{this.state.age2}</td>
-                            <td>{this.state.experience2}</td>
-                            <td>{this.state.weightClass2}</td>
-                            <td>{this.state.email2}</td>
-                            <td>
-                              <Button
-                                onClick={() =>
-                                  this.onClickOpponents(
-                                    this.state.email,
-                                    this.state.email2
-                                  )
-                                }
-                              >
-                                Contact
-                              </Button>
-                            </td>
-                          </tr>
+                          <If condition={this.state.email2}>
+                            <tr>
+                              <td>3</td>
+                              <td>{this.state.name2}</td>
+                              <td>{this.state.weight2}</td>
+                              <td>{this.state.height2}</td>
+                              <td>{this.state.gender2}</td>
+                              <td>{this.state.age2}</td>
+                              <td>{this.state.experience2}</td>
+                              <td>{this.state.weightClass2}</td>
+                              <td>{this.state.email2}</td>
+                              <td>
+                                <Button
+                                  onClick={() =>
+                                    this.onClickOpponents(
+                                      this.state.email,
+                                      this.state.email2
+                                    )
+                                  }
+                                >
+                                  Contact
+                                </Button>
+                              </td>
+                            </tr>
                           </If>
                         </tbody>
                       </Table>

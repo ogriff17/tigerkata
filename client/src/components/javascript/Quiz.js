@@ -144,13 +144,13 @@ onChangeStyle(e){
         window.$Email = user.email;
         axios.post('/users/update', user)
         .then(res => console.log(res.data));
-        //window.Location = '/';
+        //history.push = '/FindFight';
     
 
   }
   render(){
   return (
-    <div>
+    <div id="quizPage">
       <br></br>
       <br></br>
       <div className="Quiz" id="Quizbox">
@@ -225,7 +225,7 @@ onChangeStyle(e){
           </FormGroup>
           </fieldset>
           <br></br>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" id ="button">
             Submit
           </Button>
         </form>

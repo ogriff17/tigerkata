@@ -20,45 +20,61 @@ import { Col, Form,  Label, Input} from 'reactstrap';
 
 export default class Email extends Component {
   constructor(props) {
-    // super(props);
-    // // this.onChangeName = this.onChangeName.bind(this);
-    // // this.onSubmit = this.onSubmit.bind(this);
-    // // this.onClickOpponents = this.onClickOpponents.bind(this);
+    super(props);
+      this.onChangeEmail = this.onChangeEmail.bind(this);
+      this.onChangeSubject = this.onChangeSubject.bind(this);
+      this.onChangeMessage = this.onChangeMessage.bind(this);
      this.state = {
       email: "",
-      name: "",
-      age: 0,
-      weight: 0,
-      height: 0,
-      gender: "",
-      experience: 0,
-      trainingHours: 0,
-      style: "",
-      weightClass: "",
+      subject: "",
+      message: ""
     };
   };
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
+  onChangeSubject(e) {
+    this.setState({
+      subject: e.target.value,
+    });
+  }
+  onChangeMessage(e) {
+    this.setState({
+      message: e.target.value,
+    });
+  }
 
   render() {
-    console.log("window.opponent =" + window.$Opponent);
     return (
-     <div>
+     <div id ="email-div">
               <Form>
                  <FormGroup row>
-                  <Label for="exampleEmail" sm={2}>Email</Label>
-                  <Col sm={10}>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-                  </Col>
+                  <Label for="email">Email</Label>
+                  {/* <Col sm={10}> */}
+                    <Input type="email"  value={this.state.email}
+                    onChange={this.onChangeEmail}  name="email" id="exampleEmail" placeholder="" />
+                  {/* </Col> */}
                 </FormGroup>
                  <FormGroup row>
-                  <Label for="exampleEmail" sm={2}>Subject</Label>
-                  <Col sm={10}>
-                    <Input type="text" name="email" id="exampleEmail" placeholder="with a placeholder" />
-                  </Col>
+                  <Label for="subject">Subject</Label>
+                  {/* <Col sm={10}> */}
+                    <Input type="text" value={this.state.subject}
+                    onChange={this.onChangeSubject} name="subject" id="subexample" placeholder="" />
+                  {/* </Col> */}
                 </FormGroup>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows="3" />
-                </Form.Group>
+                <FormGroup controlId="exampleForm.ControlTextarea1">
+                <Label for ="message">Message</Label>
+                <Input type="textarea"  value={this.state.message}
+                    onChange={this.onChangeMessage}rows="9" cols ="50" name ="message" />
+                </FormGroup>
+                <br></br>
+                <Button variant="primary" type="submit" id="button">
+                Submit
+                </Button>
+                <br></br>
                 </Form>
       </div>
     );

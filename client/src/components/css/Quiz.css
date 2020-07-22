@@ -6,8 +6,17 @@
     background-image: url("/public/images/tigereyes.png"); /*This is not working*/
 }
 
+#quizPage{
+    background-color:orange;
+      width:100%;
+      height:50em;
+}
 
 
-
+#loginPage{
+    background-color:orange;
+    width:100%;
+    height:50em;
+}
 
 

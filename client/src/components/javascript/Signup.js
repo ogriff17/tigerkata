@@ -43,7 +43,7 @@ const Signup = (props) => {
         }
 
   return (
-      <div>
+      <div id="SignUp">
           <br></br><br></br>
         <div className = "Login" id="SignUp">
             <h2>Sign Up</h2>
@@ -86,7 +86,7 @@ const Signup = (props) => {
                      />
                 </FormGroup>
                 <br></br>
-                <Button block bsSize ="large" disabled={!validateForm()} type="submit">
+                <Button block bsSize ="large" disabled={!validateForm()} type="submit" id="button">
                Sign Up!
                 </Button>
             </form>

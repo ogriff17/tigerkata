@@ -3,22 +3,25 @@
 }
 
 #SignUp{
-    height:20%;
-    width:20%;
-    margin:auto;
-    border:3px solid orange;
-    padding:30px;
     background-color:orange;
+      width:100%;
+      height:50em;
 }
 
+.LoginInput{
+    border-style:solid;
+    border-color:black;
+}
 
+.NameInput{
+    border-style:solid;
+    border-color:black;
+}
 
-
-/* #NameInput{
-    height:20%;
-    width:10%;
-    margin:auto;
-    border:3px solid orange;
-    padding:30px;
-    background-color:orange;
-} */
+#button{
+    background-color:black;
+    color:white;
+    padding:20px;
+    border-style:solid;
+    border-color:white;
+}

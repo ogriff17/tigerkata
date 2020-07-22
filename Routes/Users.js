@@ -8,6 +8,14 @@ router.route('/Login').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/Email').get((req, res) => {
+    console.log('Inside/Login route')
+    User.find({}, {email: 1, name:1})
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
 router.route('/quiz').get((req, res) => {
     console.log('Inside/Login route')
     const email = req.body.email;

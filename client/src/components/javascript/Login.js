@@ -68,7 +68,7 @@ const Login = (props)=> {
         };
 
   return (
-      <div>
+      <div id="loginPage">
           <br></br><br></br>
         <div className = "Login" id="PwBox">
             <h2>Login</h2>
@@ -93,7 +93,7 @@ const Login = (props)=> {
                      />
                 </FormGroup>
                 <br></br>
-                <Button block bsSize ="large" disabled={!validateForm()} type="submit">
+                <Button block bsSize ="large" disabled={!validateForm()} type="submit" id ="button">
                 Login
                 </Button>
             </form>
