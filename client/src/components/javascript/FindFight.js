@@ -55,7 +55,7 @@ export default class FindFight extends Component {
     };
     console.log("email=" + user.email);
     axios
-      .get("http://localhost:5000/users/quiz", user)
+      .get("/users/quiz", user)
       .then((res) => {
         console.log("inside .then");
         let i;
@@ -103,7 +103,7 @@ export default class FindFight extends Component {
       name: this.state.name,
     };
     window.$Opponent = true;
-    axios.get("http://localhost:5000/users/FindFight", user).then((res) => {
+    axios.get("/users/FindFight", user).then((res) => {
       console.log(res.data);
       let i;
       let gender = "";

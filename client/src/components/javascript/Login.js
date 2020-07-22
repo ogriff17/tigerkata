@@ -23,7 +23,7 @@ const Login = (props)=> {
             password:password 
         }
         console.log('user =' + {user})
-        axios.get('http://localhost:5000/users/Login', user)
+        axios.get('/users/Login', user)
         .then(res => ChkResults(res, user) )
         .catch((error) => {console.log(error)});
     }

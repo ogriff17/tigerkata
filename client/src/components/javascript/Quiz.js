@@ -40,7 +40,7 @@ export default class Quiz extends Component{
       email:window.$Email
     }
     console.log('email=' + user.email)
-    axios.get('http://localhost:5000/users/quiz', user)
+    axios.get('/users/quiz', user)
     .then(res => {
       console.log('inside .then')
       let i
@@ -142,7 +142,7 @@ onChangeStyle(e){
     console.log('user=' + user.style);
         window.$Name = user.name;
         window.$Email = user.email;
-        axios.post('http://localhost:5000/users/update', user)
+        axios.post('/users/update', user)
         .then(res => console.log(res.data));
         //window.Location = '/';
     

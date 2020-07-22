@@ -1,7 +1,10 @@
+
 const express = require ('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -20,6 +23,17 @@ const UserRouter = require('./Routes/Users');
 
 app.use('/Matches', MatchesRouter); //Here to add more variables later i.e. Login and Quiz.
 app.use('/Users', UserRouter);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use('/', usersRouter);
+
+if (process.env.NODE_ENV === 'production'){
+    app.use (express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../client/build/index/html'));
+    });
+};
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
