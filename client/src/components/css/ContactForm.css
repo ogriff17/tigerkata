@@ -1,0 +1,15 @@
+* {
+    box-sizing:border-box;
+}
+
+textarea {
+    resize: none;
+  }
+
+  #Contactform{
+      background-color:orange;
+      width:100%;
+      height:50em; 
+  }
+
+  

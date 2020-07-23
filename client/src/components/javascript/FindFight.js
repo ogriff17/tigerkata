@@ -15,6 +15,7 @@ import axios from "axios";
 import { Radio, RadioGroup } from "react-radio-group";
 import { render } from "@testing-library/react";
 import { If } from "rc-if-else";
+import { withRouter } from "react-router-dom";
 
 export default class FindFight extends Component {
   constructor (props) {
@@ -52,9 +53,8 @@ export default class FindFight extends Component {
     });
 
     console.log("finished");
-
-    window.Location = "/Email";
-    //props.history.push("/Quiz");
+    window.$OpponentEmail = opponent;
+    this.props.history.push("/ContactForm");
   }
 
   componentDidMount() {
