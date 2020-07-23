@@ -9,7 +9,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "build": "webpack",
      "install-client": "cd client && npm install",
      "start":"node server.js"
   
