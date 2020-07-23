@@ -19,4 +19,9 @@
     height:50em;
 }
 
+#fieldset{
+    border-style:solid;
+    border-color:black;
+}
+
 
