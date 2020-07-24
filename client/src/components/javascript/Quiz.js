@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import {Radio, RadioGroup} from 'react-radio-group';
 import {Component} from 'react';
-//import tigereyes from '/public/images/tigereyes.png'; //Somewhere here I have to import the image
-//otherwise it wont work...
+import { withRouter } from "react-router-dom";
+
 
 export default class Quiz extends Component{
   constructor (props){
@@ -144,7 +144,7 @@ onChangeStyle(e){
         window.$Email = user.email;
         axios.post('/users/update', user)
         .then(res => console.log(res.data));
-        //history.push = '/FindFight';
+        this.props.history.push("/FindFight");
     
 
   }

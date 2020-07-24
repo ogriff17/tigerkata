@@ -313,7 +313,7 @@ export default class FindFight extends Component {
                               <td>{this.state.weightClass0}</td>
                               <td>{this.state.email0}</td>
                               <td>
-                                <Button
+                                <Button className ="contactMe"
                                   onClick={() =>
                                     this.onClickOpponents(
                                       this.state.email,
@@ -338,7 +338,7 @@ export default class FindFight extends Component {
                               <td>{this.state.weightClass1}</td>
                               <td>{this.state.email1}</td>
                               <td>
-                                <Button
+                                <Button className ="contactMe"
                                   onClick={() =>
                                     this.onClickOpponents(
                                       this.state.email,
@@ -363,7 +363,7 @@ export default class FindFight extends Component {
                               <td>{this.state.weightClass2}</td>
                               <td>{this.state.email2}</td>
                               <td>
-                                <Button
+                                <Button className ="contactMe"
                                   onClick={() =>
                                     this.onClickOpponents(
                                       this.state.email,

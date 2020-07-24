@@ -17,4 +17,14 @@ nav{
     justify-content:space-around;
     align-items:center;
     list-style:none;
+
+}
+
+.contactMe{
+    border-style:solid;
+    border-color:rgb(185, 12, 12);
+    background-color:black;
+    color:white;
+    padding:10px;
+    
 }
