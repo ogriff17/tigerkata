@@ -12,6 +12,7 @@
     margin:0 auto;
     max-width: 320px;
     border-width:5px;
+   
 }
 
 }
@@ -20,9 +21,6 @@
     height:20%;
     width:10%;
     margin:auto;
-    border:3px solid orange;
-    padding:30px;
-    background-color:orange;
 }
 
 #PwText{
@@ -31,4 +29,8 @@
 
 .LoginInput{
     width:100%;
+}
+
+#loginPage{
+    background-image: linear-gradient(to top, #db611b 0%, #22130c 100%); 
 }

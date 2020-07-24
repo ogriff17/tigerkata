@@ -61,18 +61,18 @@ export default class ContactForm extends React.Component {
                   {/* </Col> */}
                 </FormGroup>
                  <FormGroup row>
-                  <Label for="subject">Subject</Label>
+                  <Label for="subject" className="announce">Subject</Label>
                   {/* <Col sm={10}> */}
                     <Input type="text" value={this.state.subject}
                     onChange={this.onChangeSubject} name="subject" id="subexample" placeholder="" />
                   {/* </Col> */}
                 </FormGroup>
                 <FormGroup controlId="exampleForm.ControlTextarea1">
-                <Label for ="message">Message</Label>
+                <Label for ="message" className="announce" className="announce">Message</Label>
                 <Input type="textarea"  value={this.state.message}
                     onChange={this.onChangeMessage}rows="9" cols ="50" name ="message" />
                 </FormGroup>
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+        {status === "SUCCESS" ? <p>Thanks!</p> : <button id ="submitMe">Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
       </div>

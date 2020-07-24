@@ -2,7 +2,6 @@ import '../css/Signup.css';
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { FormLabel } from "react-bootstrap";
 import React, { useState } from "react";
-// import { PromiseProvider } from 'mongoose';
 import axios from "axios";
 
 

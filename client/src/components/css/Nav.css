@@ -7,16 +7,18 @@ nav{
     justify-content:space-around;
     align-items:center;
     min-height:10vh;
-    background:rgb(218, 75, 10);
+    background-color:rgb(12, 9, 8);
+    
 
 }
 
 .nav-Links{
-    width:40%;
+    width:30%;
     display:flex;
     justify-content:space-around;
     align-items:center;
     list-style:none;
+    color:orange;
 
 }
 
@@ -27,4 +29,10 @@ nav{
     color:white;
     padding:10px;
     
+}
+
+.Home{
+    color:white;
+    font-style: italic;
+    font-weight: 500;
 }
