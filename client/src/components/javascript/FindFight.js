@@ -205,70 +205,77 @@ export default class FindFight extends Component {
               <Card.Body>
                 <Card.Title></Card.Title>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Name:</FormLabel>
+                  <FormLabel className="Stats">Name:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.name}
                     onChange={this.onChangeName}
                   />
+                  
                 </FormGroup>
+                <div>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Weight:</FormLabel>
+                  <FormLabel className="Stats">Weight:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.weight}
-                    onChange={this.onChangeWeight}
-                  />
+                    onChange={this.onChangeWeight}/>
                 </FormGroup>
+                </div>  
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Height:</FormLabel>
+                  <FormLabel className="Stats">Height:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.height}
                     onChange={this.onChangeHeight}
                   />
+  
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Gender:</FormLabel>
+                  <FormLabel className="Stats">Gender:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.gender}
                     onChange={this.onChangeGender}
                   />
+                   
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Age:</FormLabel>
+                  <FormLabel className="Stats">Your Age:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.age}
                     onChange={this.onChangeAge}
                   />
+                   
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Experience:</FormLabel>
+                  <FormLabel className="Stats">Experience:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.experience}
                     onChange={this.onChangeExperience}
                   />
+                   
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Weight Class:</FormLabel>
+                  <FormLabel className="Stats">Weight Class:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
                     value={this.state.weightClass}
                     onChange={this.onChangeWeightClass}
                   />
+                 
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel>Email address:</FormLabel>
+                  <FormLabel className="Stats">Email address:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
@@ -283,7 +290,7 @@ export default class FindFight extends Component {
                 <Card>
                   <If condition={window.$Opponent}>
                     <br></br>
-                    <Card.Header>Featured Opponents:</Card.Header>
+                    <Card.Header id="cardHeader">Featured Opponents:</Card.Header>
                     <Card.Body>
                       <Table responsive className="Table" bordered="true">
                         <thead>

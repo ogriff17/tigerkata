@@ -22,3 +22,17 @@
       height:50em;
 }
 
+#startHere{
+    font-size: xx-large;
+    color:black;
+}
+
+.Stats{
+    color:white;
+    padding: 20px;
+}
+
+#cardHeader{
+    color:white;
+    font-size:20px;
+}

@@ -69,11 +69,10 @@ const Login = (props)=> {
 
   return (
       <div id="loginPage">
-          <br></br><br></br>
         <div className = "Login" id="PwBox">
             <h2>Login</h2>
             <form onSubmit ={handleSubmit}>
-                <br></br>
+                 <br></br> 
                 <FormGroup controlId ="email" bsSize="large"> 
                     <FormLabel>Email</FormLabel>
                     <FormControl className ="LoginInput"

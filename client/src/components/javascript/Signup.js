@@ -43,7 +43,6 @@ const Signup = (props) => {
 
   return (
       <div id="SignUp">
-          <br></br><br></br>
         <div className = "Login" id="SignUp">
             <h2>Sign Up</h2>
             <form onSubmit ={handleSubmit}>
