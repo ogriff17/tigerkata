@@ -10,7 +10,7 @@ import { FormLabel } from "react-bootstrap";
 import React, { useState, Component } from "react";
 import { Card } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
-import Table from "react-bootstrap/table";
+import Table from "react-bootstrap/Table";
 import axios from "axios";
 // import {ButtonGroup, ToggleButton} from "react-bootstrap";
 import { Radio, RadioGroup } from "react-radio-group";
