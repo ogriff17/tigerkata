@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "engines": {
     "node": "12.14.1",
-    "npm": "6.13.4"
+    "npm": "6.13.4",
+    "axios": "0.19.2",
+    "mongodb": "3.5.9"
   },
   "description": "",
   "main": "server.js",
