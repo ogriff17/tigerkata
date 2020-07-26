@@ -14,7 +14,7 @@ const Login = (props)=> {
     }
 
     function handleSubmit(event){  
-        event.preventDefault(); // no code here
+        event.preventDefault(); 
         window.$Login = false;
         window.$Email = '';
         window.$Name = '';

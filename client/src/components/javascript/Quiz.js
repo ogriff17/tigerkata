@@ -158,72 +158,71 @@ onChangeStyle(e){
         <form onSubmit={this.onSubmit}>
           <fieldset id = "fieldset">
             <FormGroup controlId="formBasicQuiz">
-            <FormLabel>Your email address:</FormLabel>
+            <FormLabel className="formLabel">Your email address:</FormLabel>
             <FormControl type="text" placeholder="email here" disabled="true" value={this.state.email} onChange={this.onChangeEmail}/>
           </FormGroup>
             <br></br>
             <FormGroup controlId="formBasicQuiz">
-            <FormLabel>Your name:</FormLabel>
+            <FormLabel className="formLabel" >Your name:</FormLabel>
             <FormControl type="text" placeholder="Name here" disabled="true" value={this.state.name} onChange={this.onChangeName} />
           </FormGroup>
           <br></br>
-
-            <FormGroup>
-              <FormLabel>Declare your style:</FormLabel>
-          <RadioGroup name ="rbStyle">
-            <br></br>
-            <Radio type="radio" value ="S" checked={this.state.style === "S"} onChange={this.onChangeStyle}
-            /> Striker
-      
-            <Radio type="radio" value ="G" checked={this.state.style === "G"} onChange={this.onChangeStyle} 
-            />
-                Grappler 
-           
-            <Radio type="radio" value ="B" checked={this.state.style === "B"} onChange={this.onChangeStyle}
-            /> Both
-          </RadioGroup>
-          </FormGroup>
-          <br></br>
           <FormGroup controlId="formBasicQuiz">
-            <FormLabel>How long have you trained?</FormLabel>
+            <FormLabel className="formLabel">How long have you trained?</FormLabel>
             <FormControl type="text" placeholder="years of experience" value={this.state.experience} onChange={this.onChangeExperience}/>
           </FormGroup>
           <br></br>
-
-          <RadioGroup name ="rbGender">
-
-
-            <Radio type="radio" value="M" checked={this.state.gender === "M"} onChange={this.onChangeGender}/> 
-          Male
-        
-            <Radio type="radio" value="F"checked={this.state.gender === "F"} onChange={this.onChangeGender} />
-           Female
-           
-          </RadioGroup>
-          
-          <br></br>
-          
           <FormGroup controlId="formBasicQuiz">
-            <FormLabel>What is your age?</FormLabel>
+            <FormLabel className="formLabel">What is your age?</FormLabel>
             <FormControl type="text"placeholder="" value ={this.state.age} onChange={this.onChangeAge}/>
           </FormGroup>
         
           <br></br>
           <FormGroup controlId="formBasicQuiz">
-            <FormLabel>How much do you train weekly?</FormLabel>
+            <FormLabel className="formLabel">How much do you train weekly?</FormLabel>
             <FormControl type="text" placeholder="i.e.hours a week" value={this.state.trainingHours} onChange={this.onChangeTrainingHours} />
           </FormGroup>
           <br></br>
           <FormGroup controlId="formBasicQuiz">
-            <FormLabel>How much do you weigh?</FormLabel>
+            <FormLabel className="formLabel">How much do you weigh?</FormLabel>
             <FormControl type="text" placeholder="determine your weight class" value={this.state.weight} onChange={this.onChangeWeight}/>
           </FormGroup>
           <br></br>
           <FormGroup controlId="formBasicQuiz">
-            <FormLabel>How tall are you?</FormLabel>
+            <FormLabel className="formLabel">How tall are you?</FormLabel>
             <FormControl type="text" placeholder="i.e.height in inches" value={this.state.height} onChange={this.onChangeHeight} />
           </FormGroup>
           </fieldset>
+          <br></br>
+          <RadioGroup name ="rbGender" id="gender"> Gender: 
+          <fieldset>
+
+            <Radio type="radio" className="radio-button" value="M" checked={this.state.gender === "M"} onChange={this.onChangeGender}/> 
+          Male
+        
+            <Radio type="radio" className="radio-button" value="F"checked={this.state.gender === "F"} onChange={this.onChangeGender} />
+           Female
+           </fieldset>
+          </RadioGroup>
+          
+          <br></br>
+          <FormGroup>
+              <FormLabel id ="style">Style:</FormLabel>
+          <RadioGroup name ="rbStyle">
+            <fieldset>
+            <br></br>
+            <Radio type="radio" className="radio-button" value ="S" checked={this.state.style === "S"} onChange={this.onChangeStyle}
+            /> Striker
+      
+            <Radio type="radio" className="radio-button" value ="G" checked={this.state.style === "G"} onChange={this.onChangeStyle} 
+            />
+                Grappler 
+           
+            <Radio type="radio" className="radio-button" value ="B" checked={this.state.style === "B"} onChange={this.onChangeStyle}
+            /> Both
+            </fieldset>
+          </RadioGroup>
+          </FormGroup>
           <br></br>
           <Button variant="primary" type="submit" id ="button">
             Submit

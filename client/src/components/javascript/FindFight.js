@@ -265,7 +265,7 @@ export default class FindFight extends Component {
                    
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel className="Stats">Weight Class:</FormLabel>
+                  <FormLabel className="Stats">Class:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
@@ -275,7 +275,7 @@ export default class FindFight extends Component {
                  
                 </FormGroup>
                 <FormGroup controlId="formBasicQuiz">
-                  <FormLabel className="Stats">Email address:</FormLabel>
+                  <FormLabel className="Stats">Email:</FormLabel>
                   <FormControl
                     type="text"
                     disabled="true"
