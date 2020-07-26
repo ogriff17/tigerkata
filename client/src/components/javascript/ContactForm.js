@@ -54,24 +54,27 @@ export default class ContactForm extends React.Component {
       >
         
         <FormGroup row>
-                  <Label for="email">Email</Label>
+                  <Label for="email" className="announce">Email</Label>
                   {/* <Col sm={10}> */}
-                    <Input type="email"  value={this.state.email}
+                    <Input type="email" className="inputType" value={this.state.email}
                     onChange={this.onChangeEmail}  name="email" id="exampleEmail" placeholder="" />
                   {/* </Col> */}
                 </FormGroup>
+                <br></br>
                  <FormGroup row>
                   <Label for="subject" className="announce">Subject</Label>
                   {/* <Col sm={10}> */}
-                    <Input type="text" value={this.state.subject}
+                    <Input type="text" className="inputType" value={this.state.subject}
                     onChange={this.onChangeSubject} name="subject" id="subexample" placeholder="" />
                   {/* </Col> */}
                 </FormGroup>
+                <br></br>
                 <FormGroup controlId="exampleForm.ControlTextarea1">
-                <Label for ="message" className="announce" className="announce">Message</Label>
-                <Input type="textarea"  value={this.state.message}
+                <Label for ="message" className="announce" className="announce"></Label>
+                <Input type="textarea"  className="inputType" value={this.state.message}
                     onChange={this.onChangeMessage}rows="9" cols ="50" name ="message" />
                 </FormGroup>
+                <br></br>
         {status === "SUCCESS" ? <p>Thanks!</p> : <button id ="submitMe">Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>

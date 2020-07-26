@@ -22,7 +22,7 @@
 }
 
 .formLabel{
-    color:black;
+    color:white;
     width:240px;
     display:inline-block;
     text-align:center;
@@ -44,5 +44,13 @@ fieldset{
 
 .radio-button{
     margin-left:15px;
+}
+
+#gender{
+    color:white;
+}
+
+#style{
+    color:white;
 }
 
