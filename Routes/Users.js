@@ -47,7 +47,7 @@ router.route('/add').post((req, res) => { //This is used for when you sign up.
     });
     console.log("This is in the router!");
     newUser.save()
-     .then(() => res.json("Fiddlesticks!"))
+     .then(() => res.json("Working!"))
     .catch(err => res.status(400).json('Error: ' + err));
 })
 router.route('/update').post((req, res) => { //This is used for when you take the quiz.
